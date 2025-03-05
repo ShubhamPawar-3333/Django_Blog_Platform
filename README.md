@@ -10,6 +10,49 @@ Welcome to the Blog Platform with Analytics, a modern web application built with
 - **Responsive Design**: Styled with CSS for a professional, mobile-friendly experience.
 - **Scalable Architecture**: Modular Django apps for blogs and analytics, ready for expansion.
 
+## Folder Structure
+```text
+/blog_platform/
+│
+├── /blog_app/                # Main app for blog-related functionality
+│   ├── /migrations/          # Database migration files (auto-generated)
+│   ├── /static/              # Static files (CSS, JS, images)
+│   │   ├── /css/             # CSS styles
+│   │   ├── /js/              # JavaScript files
+│   │   └── /images/          # Image assets
+│   ├── /templates/           # HTML templates
+│   │   ├── /blog_app/        # App-specific templates
+│   │   └── base.html         # Base template for inheritance
+│   ├── __init__.py           # Marks directory as a Python package
+│   ├── admin.py              # Admin panel configuration
+│   ├── apps.py               # App configuration
+│   ├── models.py             # Database models (Blog, Comment, etc.)
+│   ├── urls.py               # App-specific URL routing
+│   └── views.py              # Logic for handling requests and rendering pages
+│
+├── /blog_platform/           # Project settings and configuration
+│   ├── __init__.py           # Marks directory as a Python package
+│   ├── asgi.py               # ASGI config (for async, if needed later)
+│   ├── settings.py           # Project settings (databases, apps, etc.)
+│   ├── urls.py               # Project-level URL routing
+│   └── wsgi.py               # WSGI config for deployment
+│
+├── /analytics/               # App for analytics functionality
+│   ├── /migrations/          # Database migration files
+│   ├── __init__.py
+│   ├── admin.py              # Analytics admin config
+│   ├── apps.py               # App config
+│   ├── models.py             # Models for tracking views/stats
+│   ├── urls.py               # Analytics-specific URLs
+│   └── views.py              # Analytics dashboard logic
+│
+├── /media/                   # User-uploaded files (e.g., blog images)
+│
+├── manage.py                 # Django management script
+├── requirements.txt          # Project dependencies
+└── README.md                 # Project documentation
+```
+
 ## Installation
 Follow these steps to set up the Blog Platform with Analytics locally:
 
