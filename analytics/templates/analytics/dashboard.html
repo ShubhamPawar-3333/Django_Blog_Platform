@@ -1,0 +1,16 @@
+<!-- analytics/templates/analytics/dashboard.html -->
+{% extends 'base.html' %}
+
+{% block title %}Analytics Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Analytics Dashboard</h2>
+    <p>Total Views: {{ total_views }}</p>
+    <p>Unique Visitors: {{ unique_visitors }}</p>
+    <h3>Top 5 Popular Posts</h3>
+    <ul>
+        {% for post in popular_posts %}
+            <li>{{ post.title }} - {{ post.view_count }} views</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
